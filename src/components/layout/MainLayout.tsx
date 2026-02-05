@@ -28,10 +28,13 @@ interface SectionProps {
  * for each portfolio section with proper scroll spy integration
  */
 function Section({ id, className = '', children }: SectionProps) {
+  // Use different layout for experience section to avoid centering issues
+  const isExperience = id === 'experience';
+  
   return (
     <section 
       id={id}
-      className={`min-h-screen flex items-center justify-center py-20 ${className}`}
+      className={`${isExperience ? 'min-h-screen py-20' : 'min-h-screen flex items-center justify-center py-20'} ${className}`}
       data-section={id}
     >
       <div className="container mx-auto px-4">

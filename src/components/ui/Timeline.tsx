@@ -70,7 +70,7 @@ const Timeline: React.FC<TimelineProps> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { 
     once: true, 
-    margin: '-100px',
+    margin: '-50px',
     amount: animationConfig.fadeThreshold 
   });
 
@@ -111,12 +111,26 @@ const Timeline: React.FC<TimelineProps> = ({
   };
 
   return (
-    <div 
-      ref={containerRef}
-      className="relative max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-8"
-      role="region"
-      aria-label={`${variant === 'work' ? 'Work Experience' : 'Education'} Timeline`}
-    >
+    <div className="py-8">
+      {/* Section Header */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          {variant === 'work' ? 'Work Experience' : 'Education'}
+        </h2>
+        <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          {variant === 'work' 
+            ? 'My professional journey building innovative AI solutions and leading impactful projects.'
+            : 'My educational background and academic achievements in computer science and AI.'
+          }
+        </p>
+      </div>
+
+      <div 
+        ref={containerRef}
+        className="relative max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-8"
+        role="region"
+        aria-label={`${variant === 'work' ? 'Work Experience' : 'Education'} Timeline`}
+      >
       {/* Enhanced Timeline line - hidden on mobile, visible on desktop */}
       <div className="hidden lg:block absolute left-1/2 transform -translate-x-px h-full">
         <div className="w-0.5 h-full bg-gradient-to-b from-primary-200 via-primary-400 to-primary-600 opacity-60 shadow-sm" />
@@ -146,6 +160,7 @@ const Timeline: React.FC<TimelineProps> = ({
           />
         ))}
       </motion.div>
+      </div>
     </div>
   );
 };
