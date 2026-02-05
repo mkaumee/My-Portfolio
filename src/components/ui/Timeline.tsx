@@ -113,7 +113,7 @@ const Timeline: React.FC<TimelineProps> = ({
   return (
     <div 
       ref={containerRef}
-      className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8"
+      className="relative max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 py-8"
       role="region"
       aria-label={`${variant === 'work' ? 'Work Experience' : 'Education'} Timeline`}
     >
@@ -125,7 +125,7 @@ const Timeline: React.FC<TimelineProps> = ({
       </div>
       
       {/* Enhanced Mobile timeline line */}
-      <div className="lg:hidden absolute left-8 top-8 h-full">
+      <div className="lg:hidden absolute left-6 top-8 h-full">
         <div className="w-0.5 h-full bg-gradient-to-b from-primary-200 via-primary-400 to-primary-600 opacity-60" />
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-primary-500 rounded-full" />
       </div>
@@ -200,7 +200,7 @@ const TimelineItemComponent: React.FC<TimelineItemComponentProps> = ({
             : 'lg:left-1/2 lg:-translate-x-1/2'
         } 
         // Mobile positioning
-        left-8 -translate-x-1/2 lg:translate-y-0 top-8
+        left-6 -translate-x-1/2 lg:translate-y-0 top-8
         z-20 flex items-center justify-center`}
         whileHover={{ scale: 1.3 }}
         transition={{ type: "spring", stiffness: 400, damping: 15 }}
@@ -226,7 +226,7 @@ const TimelineItemComponent: React.FC<TimelineItemComponentProps> = ({
             : 'lg:ml-12 lg:pl-8'
         } 
         // Mobile spacing
-        ml-20 lg:ml-0
+        ml-16 lg:ml-0
         w-full lg:w-5/12 relative group`}
         whileHover={{ y: -4 }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
