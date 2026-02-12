@@ -10,7 +10,7 @@ export const portfolioData: PortfolioData = {
     name: "Muhammad Kaumi",
     title: "AI Engineer & Founder of Alert-Ai",
     summary: "I'm Muhammad Kaumi, a solo founder and AI engineer building Alert-Ai — an AI-powered emergency detection and guidance platform using computer vision, edge AI, and context-aware agents. I design and build end-to-end AI systems that detect emergencies in real time, guide people safely during critical moments, and bridge the gap between detection and professional response. My work focuses on computer vision, edge deployment, and human-centered emergency guidance.",
-    profileImage: "/images/profile/1770236640077.jpg",
+    profileImage: "/images/profile/1770236640077.jpeg",
     resumeUrl: "/documents/muhammad-kaumi-resume.pdf"
   },
 
