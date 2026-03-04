@@ -19,7 +19,7 @@ export const portfolioData: PortfolioData = {
       id: "exp-001",
       company: "Alert-Ai",
       position: "Founder & CEO",
-      startDate: new Date("2025-01-01"),
+      startDate: new Date("2026-01-01"),
       endDate: null, // Current position
       location: "Remote",
       responsibilities: [
